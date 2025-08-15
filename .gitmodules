@@ -1,0 +1,8 @@
+[submodule "third_party/LIBERO"]
+	path = third_party/LIBERO
+	url = https://github.com/Lifelong-Robot-Learning/LIBERO.git
+	# detatch head at f78abd6
+
+[submodule "third_party/octo"]
+	path = third_party/octo
+	url = https://github.com/montrealrobotics/octo.git

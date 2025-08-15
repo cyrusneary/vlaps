@@ -1,0 +1,23 @@
+project_name : "foundational_agents"
+experiment_name : "vlaps_octo_spatial"
+tags : []
+seed : 42
+wandb_mode : "offline"
+results_out_path : "/home/mila/n/nearyc/scratch/projects/vlaps_data/experiments/libero/results"
+save_run_video : True
+save_run_wrist_video : True
+defaults:
+  - env_config : libero_spatial.yaml
+  - agent_config : vlaps_octo_agent_config.yaml
+  - runner_config : libero_spatial.yaml
+hydra:
+  run:
+    dir: /home/mila/n/nearyc/scratch/projects/vlaps_data/experiments/libero/hydra_outputs/${now:%Y-%m-%d-%H-%M-%S}
+agent_config:
+  vla_config:
+    checkpoint_path : "/home/mila/n/nearyc/scratch/octo/2025-07-11_octo_base_1p5_libero_all_finetune_wrist/octo_finetune/experiment_20250711_174851"
+    checkpoint : 100000
+    dataset_statistics : "libero_spatial_no_noops"
+wandb:
+  wandb_mode: "offline"
+  dir: /home/mila/n/nearyc/scratch/projects/vlaps_data/experiments/libero

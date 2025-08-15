@@ -1,0 +1,40 @@
+agent_type : mcts_agent
+mcts_agent_args:
+  num_mc_samples : 300
+  exploration_weight : 1.4
+  discount : 0.99
+  num_expansions_per_node : 10
+  final_action_sampling_temp : 1.0
+  max_rollout_length : 300
+  lambda_value_mixing_param : 1.0
+  chunk_steps_to_simulate : 4
+  max_tree_depth : 80 # 20
+  replan_steps : -1
+  max_wall_time : 600
+  prior_policy_config:
+    prior_policy_type : softmax # softmax or uniform
+    distribution_parameters:
+      alpha : 5.0 # 2.0, 0.5
+  beta_distribution_config:
+    beta_distribution_type : softmax # softmax or uniform
+    chunk_library_path : "VLAPS/vlaps/action_chunk_dictionaries/octo/2025-07-14_octo_all_task_suites_successes_only_2000_medoids.pkl"
+    distribution_parameters :
+      alpha : 10.0 # 2.0
+      epsilon : 0.1
+      include_vla_chunk : True
+  rollout_policy_config: 
+    rollout_policy_type : vla # vla or uniform
+    chunk_library_path : "VLAPS/vlaps/libero/action_chunk_dictionaries/octo/2025-07-14_octo_all_task_suites_successes_only_2000_medoids.pkl" # only used for uniform sampling
+    replan_steps : -1
+  value_function_config: []
+  terminate_search_on_simulated_success : True
+vla_type : octo
+vla_config :
+  resize_size : 256
+  wrist_resize_size : 128
+  generation_temperature : 0.0
+  logprob_calc_temp : 1.0
+  checkpoint_path : "/home/mila/n/nearyc/scratch/octo/2025-07-11_octo_base_1p5_libero_all_finetune_wrist/octo_finetune/experiment_20250711_174851"
+  checkpoint : 100000
+  dataset_statistics : "libero_spatial_no_noops"
+  use_wrist : True

@@ -1,0 +1,6 @@
+runner_type : "MultiEpisodeRunner"
+log_policy : false
+tasks: ['libero_object']
+libero_object: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+init_states_ids: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+max_wall_time : 600

@@ -1,0 +1,11 @@
+agent_type : vla_agent
+vla_type : octo
+vla_config :
+  resize_size : 256
+  wrist_resize_size : 128
+  generation_temperature : 0.0
+  logprob_calc_temp : 1.0
+  checkpoint_path : "/home/mila/n/nearyc/scratch/octo/octo_finetune/2025-06-20_octo_small_1p5_libero_finetune/octo_finetune/experiment_20250620_175739"
+  checkpoint : 60000
+  dataset_statistics : "libero_90"
+  use_wrist : True
