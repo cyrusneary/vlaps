@@ -1,6 +1,6 @@
 # Improving Pre-Trained Vision-Language-Action Policies with Model-Based Search
 
-This repository contains implementation for the paper "Improving Pre-Trained Vision-Language-Action Policies with Model-Based Search".
+This repository contains implementation for the paper "[Improving Pre-Trained Vision-Language-Action Policies with Model-Based Search](https://arxiv.org/abs/2508.12211)".
 
 
 ## Installation
